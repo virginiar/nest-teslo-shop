@@ -24,6 +24,16 @@ npm i -g @nestjs/cli
 $ npm install
 ```
 
+4. Clonar el archivo ```.env.template``` y renombrar la copia a ```.env```.
+
+5. Completar las variables de entorno en el archivo ```.env```.
+
+6. Levantar la base de datos
+
+```bash
+$ docker compose up -d
+```
+
 # Compilar y ejecutar el proyecto
 
 ```bash
