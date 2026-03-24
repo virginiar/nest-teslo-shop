@@ -92,3 +92,16 @@ En este proyecto se genera una API REST con Nest y se analizan los siguientes pu
 - CORS
 - Generar build de aplicación
 
+# Librerías necesarias
+
+- Configuración para las variables de entorno:
+```bash
+$ $ npm install @nestjs/config
+```
+
+- La conexión con la base de datos Postgres requiere de la librería [TypeORM](https://github.com/typeorm/typeorm) y del conector para NestJS:
+
+```bash
+$ npm install --save @nestjs/typeorm typeorm pg
+```
+
