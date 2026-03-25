@@ -105,3 +105,8 @@ $ $ npm install @nestjs/config
 $ npm install --save @nestjs/typeorm typeorm pg
 ```
 
+Las validaciones de datos se realizan con class-validator y class-transformer:
+
+```bash
+$ npm i class-validator class-transformer
+```
