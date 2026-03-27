@@ -110,3 +110,9 @@ Las validaciones de datos se realizan con class-validator y class-transformer:
 ```bash
 $ npm i class-validator class-transformer
 ```
+
+La generación de identificadores se efectúa con [UUID](https://www.npmjs.com/package/uuid):
+
+```bash
+$ npm install uuid
+```
