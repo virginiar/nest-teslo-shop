@@ -63,7 +63,10 @@ En este proyecto se genera una API REST con Nest y se analizan los siguientes pu
 - Entities
 - Decoradores de TypeORM para entidades
 - Métodos BeforeInsert, BeforeUpdate
-- Relaciones en TyeORM
+- Relaciones en TyeORM: OneToMany y ManyToOne
+- Query Runner
+- Transacciones
+- Eliminación en cascada
 - Carga de archivos
 - Autenticación y autorización
 - JSON Web Tokens
