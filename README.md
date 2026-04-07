@@ -34,7 +34,7 @@ $ npm install
 $ docker compose up -d
 ```
 
-# Compilar y ejecutar el proyecto
+## Compilar y ejecutar el proyecto
 
 ```bash
 # desarrollo
@@ -47,6 +47,10 @@ $ npm run start:dev
 $ npm run build
 $ npm run start:prod
 ```
+
+## Ejecutar SEED
+
+<http://localhost:3000/api/seed>
 
 # Aspectos analizados
 
