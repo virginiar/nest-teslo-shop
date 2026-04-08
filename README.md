@@ -123,3 +123,8 @@ La generación de identificadores se efectúa con [UUID](https://www.npmjs.com/p
 ```bash
 $ npm install uuid
 ```
+
+La subida de archivos requiere:
+```bash
+$ npm i -D @types/multer
+```
