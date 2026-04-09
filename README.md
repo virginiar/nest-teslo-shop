@@ -128,3 +128,9 @@ La subida de archivos requiere:
 ```bash
 $ npm i -D @types/multer
 ```
+
+Para la gestión de archivos estáticos se utiliza:
+
+```bash
+$ npm i @nestjs/serve-static
+```
