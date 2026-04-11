@@ -134,3 +134,9 @@ Para la gestión de archivos estáticos se utiliza:
 ```bash
 $ npm i @nestjs/serve-static
 ```
+
+Para encriptación y hashing se utiliza argon2:
+
+```bash
+$ npm i argon2
+```

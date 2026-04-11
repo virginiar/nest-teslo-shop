@@ -5,6 +5,7 @@ import {
 } from '@nestjs/common';
 import { Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
+import * as argon from 'argon2';
 
 import { User } from './entities/user.entity';
 import { CreateUserDto } from './dto/create-user.dto';
@@ -18,10 +19,17 @@ export class AuthService {
 
   async create(createUserDto: CreateUserDto) {
     try {
-      const user = this.userRepository.create(createUserDto);
+      const { password, ...userData } = createUserDto;
+      // Generar el hash del password
+      const hash = await argon.hash(password);
+      // console.log(hash);
+      const user = this.userRepository.create({ ...userData, password: hash });
       await this.userRepository.save(user);
 
-      return user;
+      // delete user.password;
+      // return user;
+      const { password: hashed_password, ...userWithoutPassword } = user;
+      return userWithoutPassword;
     } catch (error) {
       this.handleDBErrors(error);
     }
