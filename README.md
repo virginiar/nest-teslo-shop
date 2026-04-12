@@ -140,3 +140,10 @@ Para encriptación y hashing se utiliza argon2:
 ```bash
 $ npm i argon2
 ```
+
+Para autenticación se utilizan passport y jwt:
+```bash
+$ npm install --save @nestjs/passport passport
+$ npm install --save @nestjs/jwt passport-jwt
+$ npm install --save-dev @types/passport-jwt
+```
