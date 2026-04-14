@@ -3,7 +3,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 
 import { ProductsService } from '../products/products.service';
-import { initialData } from './data/seed-data';
+import { getSeedUsers, initialData } from './data/seed-data';
 import { CreateProductDto } from '../products/dto/create-product.dto';
 import { User } from '../auth/entities/user.entity';
 
@@ -34,7 +34,7 @@ export class SeedService {
   }
 
   private async insertUsers() {
-    const seedUsers = initialData.users;
+    const seedUsers = await getSeedUsers();
 
     const users: User[] = [];
 

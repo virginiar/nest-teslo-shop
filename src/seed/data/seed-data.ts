@@ -1,3 +1,5 @@
+import * as argon from 'argon2';
+
 interface SeedProduct {
   description: string;
   images: string[];
@@ -22,26 +24,29 @@ interface SeedUser {
 }
 
 interface SeedData {
-  users: SeedUser[];
   products: SeedProduct[];
 }
 
-export const initialData: SeedData = {
-  users: [
+export async function getSeedUsers(): Promise<SeedUser[]> {
+  const hash1 = await argon.hash('ABC123');
+  const hash2 = await argon.hash('ABC123');
+  return [
     {
       email: 'test1@google.com',
       fullName: 'Test One',
-      password: 'Abc123',
+      password: hash1,
       roles: ['admin'],
     },
     {
       email: 'test2@google.com',
       fullName: 'Test Two',
-      password: 'Abc123',
+      password: hash2,
       roles: ['user', 'super'],
     },
-  ],
+  ];
+}
 
+export const initialData: SeedData = {
   products: [
     {
       description:
