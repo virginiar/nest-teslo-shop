@@ -147,3 +147,9 @@ $ npm install --save @nestjs/passport passport
 $ npm install --save @nestjs/jwt passport-jwt
 $ npm install --save-dev @types/passport-jwt
 ```
+Para generar la documentación se utiliza Swagger:
+
+```bash
+$ npm install --save @nestjs/swagger
+```
+
