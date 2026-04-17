@@ -102,6 +102,7 @@ En este proyecto se genera una API REST con Nest y se analizan los siguientes pu
 # Librerías necesarias
 
 - Configuración para las variables de entorno:
+
 ```bash
 $ $ npm install @nestjs/config
 ```
@@ -125,6 +126,7 @@ $ npm install uuid
 ```
 
 La subida de archivos requiere:
+
 ```bash
 $ npm i -D @types/multer
 ```
@@ -142,6 +144,7 @@ $ npm i argon2
 ```
 
 Para autenticación se utilizan passport y jwt:
+
 ```bash
 $ npm install --save @nestjs/passport passport
 $ npm install --save @nestjs/jwt passport-jwt
@@ -151,5 +154,12 @@ Para generar la documentación se utiliza Swagger:
 
 ```bash
 $ npm install --save @nestjs/swagger
+```
+
+Para la aplicación de mensajería con WebSockets se necesitan:
+
+```bash
+$ npm i --save @nestjs/websockets @nestjs/platform-socket.io
+$ npm i socket.io
 ```
 
